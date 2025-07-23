@@ -8,7 +8,12 @@ from sklearn.metrics import ConfusionMatrixDisplay
 import mlflow
 import matplotlib.pyplot as plt
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")  # Set the MLflow tracking URI
+
+
+import dagshub
+dagshub.init(repo_owner='Pranay5519', repo_name='mlflow-dagshub-demo', mlflow=True)
+
+mlflow.set_tracking_uri("https://dagshub.com/Pranay5519/mlflow-dagshub-demo.mlflow")  # Set the MLflow tracking URI
 
 #import seaborn as sns
 # 1. Load the Iris dataset
